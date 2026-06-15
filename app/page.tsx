@@ -230,20 +230,6 @@ export default function Home() {
         <p className="hero-subtitle">
           صفحة واحدة تشرح نظام العضويات، الفئات، حدود التشغيل، رحلة العضو، التأهيل، التفضيلات، ومعايير الخدمة لفريق WOSOL.
         </p>
-        <div className="hero-grid">
-          <div className="stat">
-            <strong>03</strong>
-            <span>عضويات نهائية</span>
-          </div>
-          <div className="stat">
-            <strong>01</strong>
-            <span>مرجع موحد للفريق</span>
-          </div>
-          <div className="stat">
-            <strong>360</strong>
-            <span>رؤية تجارية وتشغيلية</span>
-          </div>
-        </div>
         <nav className="nav" aria-label="Page sections">
           {[
             ["الفلسفة", "#philosophy"],
