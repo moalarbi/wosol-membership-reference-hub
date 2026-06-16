@@ -62,26 +62,6 @@ const requestedOutputs = [
   ["Recommendations", "تقديم توصيات عملية لما يجب تعديله أو إضافته أو حذفه قبل اعتماد النموذج."],
 ];
 
-const keepInternal = [
-  "أرقام الأداء الداخلية الدقيقة.",
-  "تفاصيل التصعيد الداخلي والمسؤوليات التشغيلية.",
-  "أسماء العملاء أو النماذج المؤسسية الخاصة.",
-  "تفاصيل الحسابات أو الأرصدة التشغيلية.",
-  "أي معلومات حساسة عن الموردين أو الشركاء.",
-  "أي تسعير نهائي غير معتمد.",
-];
-
-const reviewCriteria = [
-  "قابلية البيع",
-  "وضوح الفروقات",
-  "قابلية التشغيل",
-  "حماية WOSOL من الوعود المفتوحة",
-  "قوة القيمة مقابل الرسوم",
-  "سهولة شرح العضوية للعميل",
-  "مرونة التطوير مستقبلًا",
-  "ملاءمة النموذج لطبيعة WOSOL",
-];
-
 function Section({
   id,
   number,
@@ -226,40 +206,6 @@ export default function Home() {
 
       <Section id="outputs" number="07" title="المخرجات التطويرية المقترحة">
         <Table headers={["المخرج", "ما يوضحه"]} rows={requestedOutputs} />
-      </Section>
-
-      <Section id="internal" number="08" title="نطاق المعلومات غير المشمول">
-        <p className="intro">
-          هذا الموجز لا يعرض كامل التفاصيل الداخلية. الهدف هو تقديم سياق كافٍ للفهم والتطوير، مع إبقاء التفاصيل
-          الحساسة والقرارات غير المعتمدة خارج نطاق المشاركة في هذه المرحلة.
-        </p>
-        <div className="grid two">
-          {keepInternal.map((item) => (
-            <div className="mini-card" key={item}>
-              {item}
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section id="criteria" number="09" title="معايير قوة النموذج النهائي">
-        <div className="grid four">
-          {reviewCriteria.map((item) => (
-            <div className="mini-card" key={item}>
-              <strong>{item}</strong>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section id="closing" number="10" title="الخلاصة">
-        <div className="navy-card">
-          <p>
-            هذا الموجز يقدم الاتجاه ولا يقدّم الصيغة النهائية. عضويات WOSOL لا تزال مساحة قابلة للتطوير حتى تصبح
-            أوضح في القيمة، أسهل في البيع، أكثر انضباطًا في التشغيل، وأقوى في بناء علاقة مستمرة مع العضو.
-          </p>
-          <p>النموذج الأقوى هو الذي يوازن بين الوضوح التجاري، سهولة التشغيل، وحدود الوعد المقدم للعضو.</p>
-        </div>
       </Section>
     </main>
   );
