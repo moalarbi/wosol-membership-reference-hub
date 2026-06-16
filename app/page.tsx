@@ -235,7 +235,7 @@ export default function Home() {
             ["الفلسفة", "#philosophy"],
             ["الهيكل", "#structure"],
             ["التأهيل", "#qualification"],
-            ["Prestige", "#prestige"],
+            ["عضوية بريستيج", "#prestige"],
             ["SLA", "#sla"],
             ["الشركات", "#corporate"],
           ].map(([label, href]) => (
