@@ -27,14 +27,6 @@ const tierRows = [
   ],
 ];
 
-const assumptions = [
-  "يوجد تصور أولي للفئات الثلاث، وهو قابل للتطوير.",
-  "يوجد تصور أولي للمزايا، ويحتاج إلى ترتيب تجاري أوضح.",
-  "يوجد تصور أولي لمنطق التسعير، لكنه غير معروض في هذا الموجز حتى تبقى مساحة التطوير مفتوحة.",
-  "يوجد تصور أولي لرحلة العضو، ويحتاج إلى تبسيط وربط أوضح بمرحلة البيع والتفعيل.",
-  "يوجد توجه أولي للفصل بين ما يدخل ضمن رسوم العضوية وما يُسعّر كطلب مستقل.",
-];
-
 const developmentQuestions = [
   "توضيح الفئات الثلاث من منظور تجاري وتشغيلي.",
   "تحديد مدى كفاية الفارق بين Premier وImperial.",
@@ -121,14 +113,13 @@ export default function Home() {
         <span className="eyebrow">WOSOL Membership Development Brief</span>
         <h1>موجز تطوير عضويات WOSOL</h1>
         <p className="hero-subtitle">
-          هذا الموجز يعرض التصور الحالي لعضويات WOSOL كمنتج قيد التطوير، ويوضح الفئات، الثوابت، الاتجاهات الأولية،
-          والمساحات المفتوحة لتحسين القيمة، تجربة العضو، وقابلية البيع والتشغيل.
+          هذا الموجز يعرض التصور الحالي لعضويات WOSOL كمنتج قيد التطوير، ويوضح الفئات، الثوابت، والمساحات المفتوحة
+          لتحسين القيمة، تجربة العضو، وقابلية البيع والتشغيل.
         </p>
         <nav className="nav" aria-label="Page sections">
           {[
             ["الثوابت", "#constants"],
             ["الفئات", "#tiers"],
-            ["الاتجاهات", "#assumptions"],
             ["محاور التطوير", "#questions"],
             ["المخرجات", "#outputs"],
           ].map(([label, href]) => (
@@ -166,17 +157,7 @@ export default function Home() {
         <Table headers={["العضوية", "الوضع الحالي", "الاستخدام المتوقع", "مساحة التطوير"]} rows={tierRows} />
       </Section>
 
-      <Section id="assumptions" number="04" title="الاتجاهات الأولية">
-        <div className="grid">
-          {assumptions.map((item) => (
-            <div className="mini-card" key={item}>
-              {item}
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section id="what-to-review" number="05" title="محاور التطوير المقترحة">
+      <Section id="what-to-review" number="04" title="محاور التطوير المقترحة">
         <div className="grid three">
           {[
             ["منطق الفئات", "تطوير مدى خدمة التقسيم الحالي للبيع والتشغيل."],
@@ -194,7 +175,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="questions" number="06" title="مساحات التطوير المفتوحة">
+      <Section id="questions" number="05" title="مساحات التطوير المفتوحة">
         <div className="grid two">
           {developmentQuestions.map((question) => (
             <div className="mini-card" key={question}>
@@ -204,7 +185,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="outputs" number="07" title="المخرجات التطويرية المقترحة">
+      <Section id="outputs" number="06" title="المخرجات التطويرية المقترحة">
         <Table headers={["المخرج", "ما يوضحه"]} rows={requestedOutputs} />
       </Section>
     </main>
