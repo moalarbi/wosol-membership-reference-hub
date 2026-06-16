@@ -112,10 +112,6 @@ export default function Home() {
       <section className="hero">
         <span className="eyebrow">WOSOL Membership Development Brief</span>
         <h1>موجز تطوير عضويات WOSOL</h1>
-        <p className="hero-subtitle">
-          هذا الموجز يعرض التصور الحالي لعضويات WOSOL كمنتج قيد التطوير، ويوضح الفئات، الثوابت، والمساحات المفتوحة
-          لتحسين القيمة، تجربة العضو، وقابلية البيع والتشغيل.
-        </p>
         <nav className="nav" aria-label="Page sections">
           {[
             ["الثوابت", "#constants"],
