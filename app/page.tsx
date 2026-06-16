@@ -104,6 +104,36 @@ const preferenceItems = [
   "الملاحظات الخاصة",
 ];
 
+const premierCards = [
+  {
+    title: "مستخدم واحد",
+    items: ["عضوية فردية واضحة.", "تُدار باسم عضو واحد.", "لا تمتد المزايا تلقائيًا لغير المستخدم المعتمد."],
+  },
+  {
+    title: "نقطة اتصال واحدة",
+    items: ["قناة تواصل معتمدة.", "مدير علاقة مخصص.", "تجميع الطلبات والمتابعة من جهة واحدة."],
+  },
+  {
+    title: "استخدام يومي منظم",
+    items: ["سفر ونمط حياة وأعمال.", "تنسيق الطلبات المتكررة.", "تطوير ملف التفضيلات مع كل تجربة."],
+  },
+];
+
+const imperialCards = [
+  {
+    title: "أولوية أعلى",
+    items: ["تعامل أسرع مع الطلبات.", "متابعة أدق للتفاصيل.", "تصعيد داخلي عند الحاجة."],
+  },
+  {
+    title: "خصوصية أكبر",
+    items: ["طلبات أكثر حساسية.", "تعامل محدود مع المعلومات.", "حماية أعلى لسياق العضو وتفضيلاته."],
+  },
+  {
+    title: "تنفيذ تنفيذي",
+    items: ["مناسب للشخصيات التنفيذية.", "مناسب للطلبات البروتوكولية.", "تنسيق أوضح للطلبات ذات الأثر العالي."],
+  },
+];
+
 const prestigeCards = [
   {
     title: "المستخدم الرئيسي",
@@ -235,7 +265,9 @@ export default function Home() {
             ["الفلسفة", "#philosophy"],
             ["الهيكل", "#structure"],
             ["التأهيل", "#qualification"],
-            ["عضوية بريستيج", "#prestige"],
+            ["Premier", "#premier"],
+            ["Imperial", "#imperial"],
+            ["Prestige", "#prestige"],
             ["SLA", "#sla"],
             ["الشركات", "#corporate"],
           ].map(([label, href]) => (
@@ -377,7 +409,49 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="prestige" number="14" title="كيف تُدار Prestige؟">
+      <Section id="premier" number="14" title="كيف تُدار Premier؟">
+        <div className="note-card">
+          <p>
+            Premier هي عضوية فردية مصممة لمن يريد علاقة واضحة مع WOSOL ونقطة اتصال واحدة لإدارة تفاصيل السفر ونمط الحياة
+            والأعمال بشكل مستمر.
+          </p>
+        </div>
+        <div className="grid three" style={{ marginTop: 16 }}>
+          {premierCards.map((card) => (
+            <article className="card" key={card.title}>
+              <h3>{card.title}</h3>
+              <ul>
+                {card.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section id="imperial" number="15" title="كيف تُدار Imperial؟">
+        <div className="note-card">
+          <p>
+            Imperial هي عضوية فردية بمستوى أعلى من الأولوية والخصوصية، مناسبة للشخصيات التي تحتاج متابعة أدق وطلبات أكثر
+            حساسية من حيث الوقت والبروتوكول.
+          </p>
+        </div>
+        <div className="grid three" style={{ marginTop: 16 }}>
+          {imperialCards.map((card) => (
+            <article className="card" key={card.title}>
+              <h3>{card.title}</h3>
+              <ul>
+                {card.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section id="prestige" number="16" title="كيف تُدار Prestige؟">
         <div className="note-card">
           <p>
             Prestige ليست ترقية من Imperial. Prestige عضوية مختلفة لأنها مصممة لعدة مستخدمين تحت حساب واحد، مثل عائلة
@@ -398,15 +472,15 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="sla" number="15" title="معايير الخدمة والقياس">
+      <Section id="sla" number="17" title="معايير الخدمة والقياس">
         <Table headers={["المعيار", "التعريف"]} rows={slaRows} />
       </Section>
 
-      <Section id="escalation" number="16" title="مسار التصعيد">
+      <Section id="escalation" number="18" title="مسار التصعيد">
         <Table headers={["المستوى", "الحالة", "المسؤول", "الزمن"]} rows={escalationRows} />
       </Section>
 
-      <Section id="corporate" number="17" title="نموذج الحسابات المؤسسية">
+      <Section id="corporate" number="19" title="نموذج الحسابات المؤسسية">
         <p className="intro">
           نموذج AL BAWANI يوضح إمكانية تقديم عضوية أو علاقة مؤسسية مبنية على رصيد خدمة، فريق علاقة مخصص، تقارير شهرية،
           ومراجعات ربع سنوية.
@@ -414,7 +488,7 @@ export default function Home() {
         <Table headers={["العنصر", "التطبيق"]} rows={corporateRows} />
       </Section>
 
-      <Section id="sales" number="18" title="Membership Sales Kit">
+      <Section id="sales" number="20" title="Membership Sales Kit">
         <div className="grid three">
           {salesKit.map(([title, text]) => (
             <article className="mini-card" key={title}>
@@ -425,7 +499,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="closing" number="19" title="الخلاصة التنفيذية">
+      <Section id="closing" number="21" title="الخلاصة التنفيذية">
         <div className="navy-card">
           <p>
             لكي تصبح عضويات WOSOL قابلة للبيع والتشغيل، يجب ألا تُعرض كثلاث باقات خدمات. يجب أن تُعرض كثلاث طرق مختلفة
