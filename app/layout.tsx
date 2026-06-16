@@ -9,8 +9,8 @@ const arabic = IBM_Plex_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: "WOSOL Membership Reference Hub",
-  description: "مرجع داخلي لآلية ومعلومات عضويات WOSOL.",
+  title: "WOSOL Membership Development Brief",
+  description: "موجز تطوير عضويات WOSOL لمراجعة الفئات، القيمة، قابلية البيع، وحدود التشغيل.",
 };
 
 export default function RootLayout({
