@@ -10,7 +10,7 @@ const arabic = IBM_Plex_Sans_Arabic({
 
 export const metadata: Metadata = {
   title: "WOSOL Membership Development Brief",
-  description: "موجز تطوير عضويات WOSOL لمراجعة الفئات، القيمة، قابلية البيع، وحدود التشغيل.",
+  description: "موجز تطوير عضويات WOSOL لعرض الفئات، القيمة، قابلية البيع، وحدود التشغيل.",
 };
 
 export default function RootLayout({
