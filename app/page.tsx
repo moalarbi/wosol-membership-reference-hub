@@ -246,14 +246,6 @@ function Table({ headers, rows }: { headers: string[]; rows: string[][] }) {
 export default function Home() {
   return (
     <main className="page">
-      <header className="topbar">
-        <div className="logo" aria-label="WOSOL Concierge">
-          <strong>WOSOL</strong>
-          <span>CONCIERGE</span>
-        </div>
-        <div className="meta">Membership Reference Hub · Confidential · 2026</div>
-      </header>
-
       <section className="hero">
         <span className="eyebrow">مرجع داخلي للعضويات</span>
         <h1>آلية ومعلومات عضويات WOSOL</h1>
@@ -516,7 +508,6 @@ export default function Home() {
         </div>
       </Section>
 
-      <p className="footer-note">WOSOL Concierge · Internal Membership Reference · 2026</p>
     </main>
   );
 }
